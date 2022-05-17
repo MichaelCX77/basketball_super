@@ -17,9 +17,13 @@ public class Mira : MonoBehaviour
 
     void Start()
     {
-        PosicionaBola();
         zRotate = 180;
         liberaRot = false;
+        posStart = GameObject.Find("Posicao_Inicial").GetComponent<Transform>();
+        setaImgCinza = GameObject.Find("Canvas/Seta_Cinza").GetComponent<Image>();
+        setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
+        setaCinzaObject = GameObject.Find("Canvas/Seta_Cinza");
+        PosicionaBola();
     }
 
     // Update is called once per frame

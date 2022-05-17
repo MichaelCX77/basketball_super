@@ -7,7 +7,7 @@ using System.Threading;
 public class Forca : MonoBehaviour
 {
     
-    private Rigidbody2D bola;
+    public Rigidbody2D bola;
     public float force = 0;
     private Mira rot;
     private bool forca_reversa = false;
@@ -17,6 +17,7 @@ public class Forca : MonoBehaviour
     {
         bola = GetComponent<Rigidbody2D> ();
         rot = GetComponent<Mira> ();
+        setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
     }
 
     void Update()
