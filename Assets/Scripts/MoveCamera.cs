@@ -15,6 +15,10 @@ public class MoveCamera : MonoBehaviour
     }
 
     void Update() {
+        CameraSegueBola();
+    }
+
+    void CameraSegueBola() {
         if(GameManager.instance.jogoComecou == true){
             if(bola == null && GameManager.instance.bolasEmJogo > 0){
                 bola = GameObject.Find("Bola").GetComponent<Transform>();

@@ -56,7 +56,7 @@ public class Forca : MonoBehaviour
                 }
             }
 
-            force = setaImg.fillAmount * 950;
+            force = setaImg.fillAmount * 1000;
 
         }
 
