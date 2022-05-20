@@ -1014,8 +1014,9 @@ MonoBehaviour:
   setaImg: {fileID: 0}
   setaCinzaObject: {fileID: 0}
   zRotate: 0
+  bolaParada: 0
   liberaRot: 0
-  liberaTiro: 0
+  atirar: 0
 --- !u!114 &983095358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1241884227167927819, guid: 62f1e0576b252dd44843d47690949784, type: 3}
       propertyPath: m_AngularDrag
-      value: 2.4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1241884227167927819, guid: 62f1e0576b252dd44843d47690949784, type: 3}
       propertyPath: m_GravityScale

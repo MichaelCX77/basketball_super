@@ -24,6 +24,7 @@ public class Mira : MonoBehaviour
         setaImgCinza = GameObject.Find("Canvas/Seta_Cinza").GetComponent<Image>();
         setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
         setaCinzaObject = GameObject.Find("Canvas/Seta_Cinza");
+        setaCinzaObject.SetActive(false);
         PosicionaBola();
     }
 
@@ -39,11 +40,7 @@ public class Mira : MonoBehaviour
             InputDeRotacao();
             LimitaRotacao();
             PosicionaMira();
-            setaCinzaObject.SetActive(true);
-        } else {
-            setaCinzaObject.SetActive(false);
         }
-
 
     }
 
@@ -97,6 +94,7 @@ public class Mira : MonoBehaviour
     {
 
         liberaRot = true;
+        setaCinzaObject.SetActive(true);
 
     }
 
@@ -106,6 +104,7 @@ public class Mira : MonoBehaviour
         if(bolaParada == true){
             liberaRot = false;
             atirar = true;
+            setaCinzaObject.SetActive(false);
         }
         
     }
