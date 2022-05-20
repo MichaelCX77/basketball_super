@@ -31,18 +31,20 @@ public class Forca : MonoBehaviour
         float x = force * Mathf.Cos((rot.zRotate -180) * Mathf.Deg2Rad);
         float y = force * Mathf.Sin((rot.zRotate -180) * Mathf.Deg2Rad);
 
-        if(rot.liberaTiro == true){
+        if(rot.bolaParada == true && rot.atirar == true){
+            
             bola.AddForce(new Vector2(x,y));
             Quick.onQuick();
-            rot.liberaTiro = false;
+            rot.atirar = false;
             setaImg.fillAmount = 0;
+            force = 0;
         }
 
     }
 
     void ControlaForca(){
 
-        if (rot.liberaRot == true){
+        if (rot.bolaParada == true && rot.liberaRot == true){
             
             if(!forca_reversa){
                 setaImg.fillAmount += 0.5f * Time.deltaTime;

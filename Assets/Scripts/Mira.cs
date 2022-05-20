@@ -10,10 +10,11 @@ public class Mira : MonoBehaviour
     [SerializeField] private Image setaImgCinza;
     [SerializeField] private Image setaImg;
     [SerializeField] private GameObject setaCinzaObject;
-
     public float zRotate;
+
+    public bool bolaParada = false;
     public bool liberaRot;
-    public bool liberaTiro = false;
+    public bool atirar = false;
 
     void Start()
     {
@@ -29,13 +30,25 @@ public class Mira : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotacaoMira();
-        InputDeRotacao();
-        LimitaRotacao();
-        PosicionaMira();
+
+        VerificaEstado();
+
+        if(bolaParada == true){
+
+            RotacaoMira();
+            InputDeRotacao();
+            LimitaRotacao();
+            PosicionaMira();
+            setaCinzaObject.SetActive(true);
+        } else {
+            setaCinzaObject.SetActive(false);
+        }
+
+
     }
 
     void PosicionaMira(){
+
         setaImgCinza.rectTransform.position = transform.position;
         setaImg.rectTransform.position = transform.position;
     }
@@ -56,7 +69,6 @@ public class Mira : MonoBehaviour
             float moveX = Input.GetAxis("Mouse X");
             float moveY = Input.GetAxis("Mouse Y");
 
-
             if(zRotate >= 180){
                 if(moveX > 0){
                     zRotate+=1.5f;
@@ -68,37 +80,46 @@ public class Mira : MonoBehaviour
                     zRotate-=1.5f;
                 }
             }
-
         }
-
     }
 
     void LimitaRotacao(){
 
-        if(liberaRot == true){
-            if(zRotate < 180){
-                zRotate = 180;
-            } else if(zRotate > 360){
-                zRotate = 360;
-            }
+        if(zRotate < 180){
+            zRotate = 180;
+        } else if(zRotate > 360){
+            zRotate = 360;
         }
 
-        
     }
 
     void OnMouseDown()
     {
+
         liberaRot = true;
-        setaCinzaObject.SetActive(true);
+
     }
 
     void OnMouseUp()
-    {
-        liberaRot = false;
-        liberaTiro = true;
-        setaCinzaObject.SetActive(false);
+    {   
+        
+        if(bolaParada == true){
+            liberaRot = false;
+            atirar = true;
+        }
+        
     }
 
+    void VerificaEstado(){
+        
+        Vector3 posBola = this.gameObject.transform.position;
 
+        if(this.GetComponent<Rigidbody2D>().velocity == new Vector2(0,0)){
+            bolaParada = true; //bola parada
+        } else {
+            
+            bolaParada = false;
+        }
 
+    }
 }
