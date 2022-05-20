@@ -34,11 +34,11 @@ public class MovePredios : MonoBehaviour
 
     Vector2 LimitaMovFundo(float posX, float posY){
 
-        if(posX > 0.017f){
-            posX = 0.017f;
+        if(posX > 0.020f){
+            posX = 0.020f;
         }
-        if(posX < -0.017f){
-            posX = -0.017f;
+        if(posX < -0.020f){
+            posX = -0.020f;
         }
 
         if(posY < 0.014f){

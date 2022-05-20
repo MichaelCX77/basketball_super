@@ -112,9 +112,16 @@ public class Mira : MonoBehaviour
 
     void VerificaEstado(){
         
-        Vector3 posBola = this.gameObject.transform.position;
+        Vector2 velocity = this.GetComponent<Rigidbody2D>().velocity;
+        
+        float velocityx = velocity.x;
 
-        if(this.GetComponent<Rigidbody2D>().velocity == new Vector2(0,0)){
+        if(velocity.x <= 0){
+            velocityx = (-velocity.x);
+        }
+
+        if(velocity.y == 0 && velocityx <= 0.2){
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             bolaParada = true; //bola parada
         } else {
             

@@ -23,7 +23,7 @@ public class Quick : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D colisor)
-    {
+    {   
         if(colisor.gameObject.CompareTag("chao")  && isQuick){
 
             bola.AddForce(new Vector2 (0,force));
