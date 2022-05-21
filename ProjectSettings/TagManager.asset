@@ -9,6 +9,7 @@ TagManager:
   - borda
   - cesto
   - parede
+  - ponto
   layers:
   - Default
   - TransparentFX
