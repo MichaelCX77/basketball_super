@@ -38,11 +38,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Mira.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MoveFundo.cs" />
      <Compile Include="Assets\Scripts\Quick.cs" />
+     <Compile Include="Assets\Scripts\MovePredios.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Forca.cs" />
-     <Compile Include="Assets\Scripts\MoveFundo.cs" />
-     <Compile Include="Assets\Scripts\MovePredios.cs" />
+     <Compile Include="Assets\Scripts\BolaFoco.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

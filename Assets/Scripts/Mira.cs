@@ -95,7 +95,6 @@ public class Mira : MonoBehaviour
 
         liberaRot = true;
         setaCinzaObject.SetActive(true);
-
     }
 
     void OnMouseUp()
@@ -128,4 +127,6 @@ public class Mira : MonoBehaviour
         }
 
     }
+
+
 }
