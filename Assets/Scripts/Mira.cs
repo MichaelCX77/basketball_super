@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class Mira : MonoBehaviour
 {
-    
-    [SerializeField] private Transform posStart;
     [SerializeField] private Image setaImgCinza;
     [SerializeField] private Image setaImg;
     [SerializeField] private GameObject setaCinzaObject;
     public float zRotate;
-
     public bool bolaParada = false;
     public bool liberaRot;
     public bool atirar = false;
@@ -20,12 +17,10 @@ public class Mira : MonoBehaviour
     {
         zRotate = 180;
         liberaRot = false;
-        posStart = GameObject.Find("Posicao_Inicial").GetComponent<Transform>();
         setaImgCinza = GameObject.Find("Canvas/Seta_Cinza").GetComponent<Image>();
         setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
         setaCinzaObject = GameObject.Find("Canvas/Seta_Cinza");
         setaCinzaObject.SetActive(false);
-        PosicionaBola();
     }
 
     // Update is called once per frame
@@ -50,16 +45,12 @@ public class Mira : MonoBehaviour
         setaImg.rectTransform.position = transform.position;
     }
 
-    void PosicionaBola(){
-        this.gameObject.transform.position = posStart.position;
-    }
-
     void RotacaoMira(){
         
         setaImgCinza.rectTransform.eulerAngles = new Vector3 (0,0,zRotate);
         setaImg.rectTransform.eulerAngles = new Vector3 (0,0,zRotate);
     }
-
+    
     void InputDeRotacao(){
 
         if(liberaRot == true){

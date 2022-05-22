@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BolaFoco : MonoBehaviour
 {
-
     private Transform bolaFocoT;
     private Animator anim;
     private Mira rot;

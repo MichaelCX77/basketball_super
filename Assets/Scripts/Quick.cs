@@ -33,7 +33,7 @@ public class Quick : MonoBehaviour
                 isQuick = false;
             }
         } else if(colisor.gameObject.CompareTag("parede")){
-            bola.AddForce(new Vector2 (colisor.gameObject.name == "Parede_D" ? -170 : 170 ,0));
+            bola.AddForce(new Vector2 (colisor.gameObject.name == "Parede_D" ? -150 : 150 ,0));
         } else if(colisor.gameObject.CompareTag("borda")){
             bola.AddForce(new Vector2 (0,250));
 

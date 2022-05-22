@@ -6,6 +6,7 @@ public class Placar : MonoBehaviour
 {
     public static Placar instance;
     public int pontosP1, pontosP2;
+    public bool novoPonto = false;
     
     void Awake()
     {

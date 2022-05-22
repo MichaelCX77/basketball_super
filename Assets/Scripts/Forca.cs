@@ -10,6 +10,7 @@ public class Forca : MonoBehaviour
     public Rigidbody2D bola;
     public float force = 0;
     private Mira rot;
+    private PosicaoBola pos;
     private bool forca_reversa = false;
     public Image setaImg;
 
@@ -18,6 +19,7 @@ public class Forca : MonoBehaviour
         bola = GetComponent<Rigidbody2D> ();
         rot = GetComponent<Mira> ();
         setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
+        pos = GetComponent<PosicaoBola> ();
     }
 
     void Update()
@@ -38,6 +40,10 @@ public class Forca : MonoBehaviour
             rot.atirar = false;
             setaImg.fillAmount = 0;
             force = 0;
+
+            if(pos.isPosStart == true){
+                pos.isPosStart = false;
+            }
         }
 
     }

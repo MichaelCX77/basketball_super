@@ -13,6 +13,11 @@ GameObject:
   - component: {fileID: 1241884227167927819}
   - component: {fileID: 1241884227167927818}
   - component: {fileID: 131626736}
+  - component: {fileID: 983095352}
+  - component: {fileID: 983095353}
+  - component: {fileID: 983095358}
+  - component: {fileID: 983095360}
+  - component: {fileID: 7922582525023859569}
   m_Layer: 0
   m_Name: Bola
   m_TagString: bola
@@ -73,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 8494fa732e306c84fae981eac3e2e0f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +104,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1.3
   m_LinearDrag: 0
-  m_AngularDrag: 0.2
+  m_AngularDrag: 2.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -134,5 +139,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b3a1d5b3f60b649bd04f062f5d65f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 300
   bola: {fileID: 0}
+--- !u!114 &983095352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241884227167927822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc428be16be910b4c886127062270d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setaImgCinza: {fileID: 0}
+  setaImg: {fileID: 0}
+  setaCinzaObject: {fileID: 0}
+  zRotate: 0
+  bolaParada: 0
+  liberaRot: 0
+  atirar: 0
+--- !u!114 &983095353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241884227167927822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb2293c8340d554c95aeea6ffa1e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &983095358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241884227167927822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04adc5d5f4e1c4b49bd2652cf13fe940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 0}
+  force: 0
+  setaImg: {fileID: 0}
+--- !u!114 &983095360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241884227167927822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d575b4784de7814a8a4a8e7897b9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7922582525023859569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241884227167927822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c143008de2854d40b5e36b60ac22a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posStart: {fileID: 0}
