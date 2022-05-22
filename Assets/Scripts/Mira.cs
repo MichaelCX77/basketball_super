@@ -17,9 +17,9 @@ public class Mira : MonoBehaviour
     {
         zRotate = 180;
         liberaRot = false;
-        setaImgCinza = GameObject.Find("Canvas/Seta_Cinza").GetComponent<Image>();
-        setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
-        setaCinzaObject = GameObject.Find("Canvas/Seta_Cinza");
+        setaImgCinza = GameObject.Find("Setas/Seta_Cinza").GetComponent<Image>();
+        setaImg = GameObject.Find("Setas/Seta").GetComponent<Image>();
+        setaCinzaObject = GameObject.Find("Setas/Seta_Cinza");
         setaCinzaObject.SetActive(false);
     }
 

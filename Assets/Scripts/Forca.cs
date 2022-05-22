@@ -18,7 +18,7 @@ public class Forca : MonoBehaviour
     {
         bola = GetComponent<Rigidbody2D> ();
         rot = GetComponent<Mira> ();
-        setaImg = GameObject.Find("Canvas/Seta").GetComponent<Image>();
+        setaImg = GameObject.Find("Setas/Seta").GetComponent<Image>();
         pos = GetComponent<PosicaoBola> ();
     }
 
