@@ -7,8 +7,8 @@ public class AtualizaPlacar : MonoBehaviour
 {
     private Text pontosP1, pontosP2;
     void Start(){
-        pontosP1 = GameObject.Find("Placares/PlacarP1/Pontos").GetComponent<Text>();
-        pontosP2 = GameObject.Find("Placares/PlacarP2/Pontos").GetComponent<Text>();
+        pontosP1 = GameObject.Find("Placares/PlacarImg/PontosP1").GetComponent<Text>();
+        pontosP2 = GameObject.Find("Placares/PlacarImg/PontosP2").GetComponent<Text>();
     }
 
     void OnTriggerEnter2D(Collider2D colisor)
