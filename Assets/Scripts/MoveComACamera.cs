@@ -16,6 +16,6 @@ public class MoveComACamera : MonoBehaviour
     void Update()
     {   
         Vector3 posCam = MoveCamera.instance.PosicionaCamera();
-        transform.position = new Vector3(posCam.x,(posCam.y + 2.6f),-15);
+        transform.position = new Vector3(posCam.x,(posCam.y + 3.2f),-15);
     }
 }
