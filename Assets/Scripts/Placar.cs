@@ -7,6 +7,11 @@ public class Placar : MonoBehaviour
     public static Placar instance;
     public int pontosP1, pontosP2;
     public bool novoPonto = false;
+    public string vezAtual = "P2";
+    public string proximaVez = "P1";
+    public string pontoFeitoEm = null;
+    public bool jaJogou = false;
+    
     
     void Awake()
     {

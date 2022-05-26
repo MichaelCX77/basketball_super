@@ -7,6 +7,7 @@ public class PosicaoBola : MonoBehaviour
     [SerializeField] private Transform posStart;
     public bool isPosStart = false;
     private Mira mira;
+    
     void Start()
     {   
         posStart = GameObject.Find("Posicao_Inicial").GetComponent<Transform>();
@@ -27,7 +28,6 @@ public class PosicaoBola : MonoBehaviour
         
         if(Placar.instance.novoPonto == true && mira.bolaParada == true){
             isPosStart = true;
-            Placar.instance.novoPonto = false;
             this.gameObject.transform.position = posStart.position;
         }
         

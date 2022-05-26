@@ -44,6 +44,7 @@ public class Forca : MonoBehaviour
             if(pos.isPosStart == true){
                 pos.isPosStart = false;
             }
+
         }
 
     }

@@ -19,9 +19,11 @@ public class AtualizaPlacar : MonoBehaviour
 
             if(colisor.gameObject.name == "PontoP1"){
                 pontosP1.text = (Placar.instance.pontosP1 += 1) +"";
+                Placar.instance.pontoFeitoEm = "P2";
             }
             if(colisor.gameObject.name == "PontoP2"){
                 pontosP2.text = (Placar.instance.pontosP2 += 1) +"";
+                Placar.instance.pontoFeitoEm = "P1";
             }
 
         }

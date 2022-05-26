@@ -48,6 +48,8 @@
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Placar.cs" />
      <Compile Include="Assets\Scripts\Forca.cs" />
+     <Compile Include="Assets\Scripts\ProximaVez.cs" />
+     <Compile Include="Assets\Scripts\ControlaNeon.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

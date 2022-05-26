@@ -12,6 +12,7 @@ public class Mira : MonoBehaviour
     public bool bolaParada = false;
     public bool liberaRot;
     public bool atirar = false;
+    private ControlaNeon cNeon;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Mira : MonoBehaviour
         setaImg = GameObject.Find("Setas/Seta").GetComponent<Image>();
         setaCinzaObject = GameObject.Find("Setas/Seta_Cinza");
         setaCinzaObject.SetActive(false);
+        cNeon = GameObject.Find("Placares").GetComponent<ControlaNeon>();
     }
 
     // Update is called once per frame
@@ -87,6 +89,12 @@ public class Mira : MonoBehaviour
         liberaRot = true;
         setaCinzaObject.SetActive(true);
 
+        if(Placar.instance.vezAtual == "P1"){
+            cNeon.AcendeNeonRed();
+        } else if(Placar.instance.vezAtual == "P2"){
+            cNeon.AcendeNeonBlue();
+        }
+
     }
 
     void OnMouseUp()
@@ -109,16 +117,17 @@ public class Mira : MonoBehaviour
         if(velocity.x <= 0){
             velocityx = (-velocity.x);
         }
-
-        if(velocity.y == 0 && velocityx <= 0.2){
+        
+        if(velocity.y == 0 && velocityx <= 0.2 && bolaParada == false){
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             bolaParada = true; //bola parada
-        } else {
+            Placar.instance.jaJogou = true;
+        } else if(velocity.y != 0 && velocityx >= 0.21) {
             
             bolaParada = false;
+            
         }
 
     }
-
 
 }
