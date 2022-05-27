@@ -10,8 +10,8 @@ public class ContagemRegressiva : MonoBehaviour
     private Text time;
     private Image focoTimer;
     private Animator timeEnd;
-    private float timeLeft = 100;
-    public double timeLeftRounded = 100;
+    private float timeLeft = 5;
+    public double timeLeftRounded = 5;
     private Mira mira;
 
     void Start()
@@ -34,7 +34,7 @@ public class ContagemRegressiva : MonoBehaviour
             timeLeftRounded =  Math.Floor(timeLeft);
             
             if ( timeLeftRounded <= 0 ) {
-                time.text = 00 +"";
+                time.text = "00";
             } else if ( timeLeftRounded < 10 ) {
                 time.text = "0" +  timeLeftRounded + "";
             } else {
