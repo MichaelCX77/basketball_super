@@ -12,7 +12,7 @@ public class Mira : MonoBehaviour
     public bool bolaParada = false;
     public bool liberaRot;
     public bool atirar = false;
-    private ControlaNeon cNeon;
+    private ProximaVez pVez;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class Mira : MonoBehaviour
         setaImg = GameObject.Find("Setas/Seta").GetComponent<Image>();
         setaCinzaObject = GameObject.Find("Setas/Seta_Cinza");
         setaCinzaObject.SetActive(false);
-        cNeon = GameObject.Find("Placares").GetComponent<ControlaNeon>();
+        pVez = GameObject.Find("Placar").GetComponent<ProximaVez>();
     }
 
     // Update is called once per frame
@@ -90,9 +90,9 @@ public class Mira : MonoBehaviour
         setaCinzaObject.SetActive(true);
 
         if(Placar.instance.vezAtual == "P1"){
-            cNeon.AcendeNeonRed();
+            pVez.AlertaVezP1();
         } else if(Placar.instance.vezAtual == "P2"){
-            cNeon.AcendeNeonBlue();
+            pVez.AlertaVezP2();
         }
 
     }

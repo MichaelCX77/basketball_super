@@ -9,8 +9,8 @@ public class ControlaNeon : MonoBehaviour
 
     void Start()
     {
-        animP1 = GameObject.Find("Placares/Neon_Red").GetComponent<Animator>();
-        animP2 = GameObject.Find("Placares/Neon_Blue").GetComponent<Animator>();
+        animP1 = GameObject.Find("Placares/PlacarImg/Neon_Red").GetComponent<Animator>();
+        animP2 = GameObject.Find("Placares/PlacarImg/Neon_Blue").GetComponent<Animator>();
     }
 
     void Update(){
