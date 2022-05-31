@@ -7,11 +7,12 @@ public class PosicaoBola : MonoBehaviour
     [SerializeField] private Transform posStart;
     public bool isPosStart = false;
     private Mira mira;
-    
+    private ControlaEfeitoPonto cePonto;
     void Start()
     {   
         posStart = GameObject.Find("Posicao_Inicial").GetComponent<Transform>();
         mira = GetComponent<Mira> ();
+        cePonto = GetComponent<ControlaEfeitoPonto>();
         PosicaoInicial();
     }
 
@@ -29,7 +30,13 @@ public class PosicaoBola : MonoBehaviour
         if(Placar.instance.novoPonto == true && mira.bolaParada == true){
             isPosStart = true;
             this.gameObject.transform.position = posStart.position;
+            ReiniciaEfeitoPonto();
         }
         
+    }
+
+    void ReiniciaEfeitoPonto(){
+        cePonto.ApagaPontoP1();
+        cePonto.ApagaPontoP2();
     }
 }

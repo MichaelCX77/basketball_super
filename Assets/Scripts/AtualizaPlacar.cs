@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class AtualizaPlacar : MonoBehaviour
 {
     private Text pontosP1, pontosP2;
+
+    private ControlaEfeitoPonto cePonto;
     void Start(){
         pontosP1 = GameObject.Find("Placares/PlacarImg/PontosP1").GetComponent<Text>();
         pontosP2 = GameObject.Find("Placares/PlacarImg/PontosP2").GetComponent<Text>();
+        cePonto = GetComponent<ControlaEfeitoPonto>();
     }
 
     void OnTriggerEnter2D(Collider2D colisor)
@@ -18,12 +21,14 @@ public class AtualizaPlacar : MonoBehaviour
             Placar.instance.novoPonto = true;
 
             if(colisor.gameObject.name == "PontoP1"){
+                cePonto.AcendePontoP2();
                 pontosP1.text = (Placar.instance.pontosP1 += 1) +"";
                 Placar.instance.pontoFeitoEm = "P2";
             }
             if(colisor.gameObject.name == "PontoP2"){
+                cePonto.AcendePontoP1();
                 pontosP2.text = (Placar.instance.pontosP2 += 1) +"";
-                Placar.instance.pontoFeitoEm = "P1";
+                Placar.instance.pontoFeitoEm = "P1";                
             }
 
         }
