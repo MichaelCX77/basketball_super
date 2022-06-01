@@ -10,8 +10,8 @@ public class ContagemRegressiva : MonoBehaviour
     private Text time;
     private Image focoTimer;
     private Animator timeEnd;
-    private float timeLeft = 5;
-    public double timeLeftRounded = 5;
+    private float timeLeft = 100;
+    public double timeLeftRounded = 100;
     private Mira mira;
 
     void Start()

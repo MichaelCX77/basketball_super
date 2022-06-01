@@ -216,6 +216,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca95e2bcefbce0b45a5d245716bb4f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &93589202
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93589200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec5367c09e69c0443af915905e711336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!96 &93589211
 TrailRenderer:
   serializedVersion: 2
@@ -332,6 +351,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &93589214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93589200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5aba1d9d6498241aad6ae2f72de810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &187588196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -957,7 +988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -1.5, z: -17.5}
+  m_LocalPosition: {x: -0.05, y: 2.68, z: -17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3481,11 +3512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1241884227167927816, guid: 62f1e0576b252dd44843d47690949784, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 1241884227167927816, guid: 62f1e0576b252dd44843d47690949784, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.15
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 1241884227167927816, guid: 62f1e0576b252dd44843d47690949784, type: 3}
       propertyPath: m_LocalPosition.z
